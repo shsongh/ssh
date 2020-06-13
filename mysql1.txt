@@ -1,0 +1,81 @@
+create database mysong default character set utf8 collate utf8_general_ci;
+use mysong;
+create table song (
+	name varchar(50),
+	singer varchar(20),
+	number dec(6),
+	favorite int
+) default character set utf8 collate utf8_general_ci;
+
+
+create database mysong ;
+use mysong;
+set names utf8;
+create table song (
+	name varchar(50),
+	singer varchar(20),
+	number dec(6),
+	favorite int
+);
+
+
+describe song;
+show databases;
+set names utf8;
+set names euckr;
+
+insert into song values ("애인있어요","이은미", 12345, 100);
+insert into song values ("약속","박완규", 15, 120);
+select * from song;
+select * from song where favorite > 100;
+select * from song where favorite >= 90;
+select singer from song where favorite > 100;
+select name, singer from song where favorite > 100;
+
+drop database registraton;
+
+alter table member1 add image varchar(255) default './images/a.jpg';
+
+
+
+create database registration;
+use registration;
+
+
+drop table member1;
+create table member1 (
+	name varchar(50),
+	pass varchar(40),
+	passconfirm varchar(40)
+	
+	
+) default character set utf8 collate utf8_general_ci;
+
+	
+drop table member1;
+
+
+
+create table member1 (
+	name varchar(50),
+	pass varchar(40),
+	passconfirm varchar(40),
+	image mediumblob
+	
+	
+) default character set utf8 collate utf8_general_ci;
+
+
+create table member1 (
+	name varchar(50),
+	pass varchar(40),
+	passconfirm varchar(40),
+	image varchar(255)
+	
+	
+) default character set utf8 collate utf8_general_ci;
+
+
+
+
+
